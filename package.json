@@ -1,7 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "timer",
-  "title": "Timer",
+  "name": "simple-timer",
+  "version": "0.1.0",
+  "title": "Simple Timer",
   "description": "Create a simple countdown timer",
   "icon": "command-icon.png",
   "author": "rosickey",
@@ -13,8 +14,39 @@
     {
       "name": "start-timer",
       "title": "Start Timer",
-      "description": "",
-      "mode": "view"
+      "description": "Set a countdown for a custom amount of time.",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "time",
+          "placeholder": "type time...",
+          "required": false,
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "stop-timer",
+      "title": "Stop Timer",
+      "description": "Remove active countdown.",
+      "mode": "no-view"
+    },
+    {
+      "name": "menu-bar",
+      "title": "Refresh Menu Bar",
+      "description": "See or stop active countdown from the menu bar.",
+      "mode": "menu-bar",
+      "interval": "15s"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "defaultTime",
+      "type": "textfield",
+      "required": true,
+      "title": "Default time",
+      "description": "Default time argument for a new timer.",
+      "default": "20"
     }
   ],
   "dependencies": {

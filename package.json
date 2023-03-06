@@ -1,7 +1,7 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "simple-timer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Simple Timer",
   "description": "Create a simple countdown timer",
   "icon": "command-icon.png",

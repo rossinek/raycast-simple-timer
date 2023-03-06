@@ -95,6 +95,7 @@ export function startTimer(timeInput?: string) {
   const command = `sleep ${timeInSeconds} \\
     && if [ -f "${masterName}" ]; then \\
       if [ -f "${MENU_STATE_FILE}" ]; then rm "${MENU_STATE_FILE}"; open -g ${menubarDeeplink}; fi && \\
+      open -g 'raycast://confetti' && \\
       afplay "${selectedSoundPath}" && \\
       rm "${masterName}";\\
     fi`;

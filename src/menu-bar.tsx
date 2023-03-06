@@ -9,13 +9,11 @@ export default () => {
   useEffect(() => {
     setMenuBarActive();
     refreshTimers();
-    if (timeLeftWithSeconds) {
-      const interval = setInterval(() => {
-        refreshTimers();
-      }, 1000);
-      return () => clearInterval(interval);
-    }
-  }, [timeLeftWithSeconds]);
+    const interval = setInterval(() => {
+      refreshTimers();
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <MenuBarExtra icon={Icon.Hourglass} isLoading={isLoading} title={timeLeft || undefined}>
